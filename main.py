@@ -1,6 +1,8 @@
 from fastapi import FastAPI
+from api.catalogo_router import router as catalogo_router
 
 app = FastAPI(title="Web Services API", version="1.0.0")
+app.include_router(catalogo_router)
 
 @app.get("/")
 def read_root():
