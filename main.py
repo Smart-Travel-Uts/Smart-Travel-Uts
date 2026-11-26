@@ -12,6 +12,8 @@ from api.hospedaje_router import router as hospedaje_router
 from api.navegacion_router import router as navegacion_router
 from api.transporte_router import router as transporte_router
 from api.itinerario_router import router as itinerario_router
+from api.clima_router import router as clima_router
+
 
 app = FastAPI(title="Web Services API", version="1.0.0")
 app.include_router(catalogo_router)
@@ -27,6 +29,7 @@ app.include_router(hospedaje_router)
 app.include_router(navegacion_router)
 app.include_router(transporte_router)
 app.include_router(itinerario_router)
+app.include_router(clima_router)
 
 @app.get("/")
 def read_root():
